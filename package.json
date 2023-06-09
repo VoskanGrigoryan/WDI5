@@ -1,0 +1,71 @@
+{
+    "dependencies": {
+        "allure-commandline": "^2.22.1",
+        "generator-easy-ui5": "^3.5.1"
+    },
+    "name": "demowdi5",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
+        "build:ui": "run-s  build:uimodule",
+        "clearCoverage": "shx rm -rf coverage",
+        "lint": "eslint ./**/webapp/**/*.js && prettier --plugin-search-dir=. --check ./**/webapp/**/*.{js,xml}",
+        "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
+        "build:mta": "mbt build",
+        "deploy:cf": "cross-var cf deploy mta_archives/demowdi5_$npm_package_version.mtar",
+        "deploy": "run-s build:mta deploy:cf",
+        "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
+        "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest approuter/uimodule/webapp",
+        "wdio": "wdio run ./wdio.conf.js",
+        "test": "wdio run ./wdio.conf.js --headless",
+        "allure": "allure generate --clean allure-results && allure open"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.10",
+        "@babel/preset-env": "^7.18.10",
+        "@babel/register": "^7.18.9",
+        "@prettier/plugin-xml": "^1.1.0",
+        "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+        "@sap/ui5-builder-webide-extension": "^1.1.7",
+        "@sap/ux-ui5-fe-mockserver-middleware": "1",
+        "@sap/ux-ui5-tooling": "1",
+        "@sapui5/ts-types": "~1.102.7",
+        "@ui5/cli": "^2.14.1",
+        "@wdio/allure-reporter": "^5.22.4",
+        "@wdio/cli": "^7.20.9",
+        "@wdio/firefox-profile-service": "^7.20.7",
+        "@wdio/local-runner": "^7.20.9",
+        "@wdio/mocha-framework": "^7.20.7",
+        "@wdio/spec-reporter": "^7.20.8",
+        "chromedriver": "^114.0.1",
+        "cross-var": "^1.1.0",
+        "eslint": "^7.32.0",
+        "geckodriver": "^3.2.0",
+        "karma": "^6.3.9",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-coverage": "^2.1.0",
+        "karma-ui5": "^2.3.4",
+        "mbt": "^1.0.15",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "shx": "^0.3.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5",
+        "ui5-middleware-cfdestination": "^0.7.3",
+        "ui5-middleware-livereload": "^0.7.1",
+        "ui5-task-zipper": "^0.3.1",
+        "wdio-chromedriver-service": "^7.3.2",
+        "wdio-geckodriver-service": "^4.0.0",
+        "wdio-ui5-service": "^1.3.1",
+        "wdio-wait-for": "^2.2.6",
+        "webdriverio": "^7.19.3"
+    },
+    "ui5": {
+        "dependencies": [
+            "ui5-middleware-livereload",
+            "ui5-middleware-cfdestination",
+            "ui5-task-zipper"
+        ]
+    }
+}

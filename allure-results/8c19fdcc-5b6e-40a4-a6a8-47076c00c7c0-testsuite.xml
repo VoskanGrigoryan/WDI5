@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1686228539972' stop='1686228541738'>
+    <name>The MainView page: </name>
+    <title>The MainView page: </title>
+    <test-cases>
+        <test-case start='1686228539972' status='passed' stop='1686228539977'>
+            <name>"before all" hook for The MainView page: </name>
+            <title>"before all" hook for The MainView page: </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1686228539974' status='undefined'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1686228539977' status='broken' stop='1686228541737'>
+            <name>should have a list with at least 3 items</name>
+            <title>should have a list with at least 3 items</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1686228539980' status='passed' stop='1686228539997'>
+                    <name>POST /session/:sessionId/execute/async</name>
+                    <title>POST /session/:sessionId/execute/async</title>
+                    <attachments>
+                        <attachment title='Request' source='2e020410-190d-4852-8442-000e80ee63b1-attachment.json' type='application/json' size='1887'/>
+                        <attachment title='Response' source='c03fabea-7966-46da-9736-600360eda8aa-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1686228539998' status='passed' stop='1686228540071'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='357d52e6-bc87-442c-bd04-0b79b834f84b-attachment.json' type='application/json' size='49'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1686228540543' status='passed' stop='1686228541134'>
+                    <name>POST /session/:sessionId/execute/async</name>
+                    <title>POST /session/:sessionId/execute/async</title>
+                    <attachments>
+                        <attachment title='Request' source='42e298e9-bd16-43ef-b82d-8e21338713fb-attachment.json' type='application/json' size='1899'/>
+                        <attachment title='Response' source='ef3a2046-80ed-417f-b110-90445f2621cf-attachment.json' type='application/json' size='228'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1686228541137' status='passed' stop='1686228541728'>
+                    <name>POST /session/:sessionId/execute/async</name>
+                    <title>POST /session/:sessionId/execute/async</title>
+                    <attachments>
+                        <attachment title='Request' source='532a1372-5970-41bf-86ea-75c58901f98f-attachment.json' type='application/json' size='1790'/>
+                        <attachment title='Response' source='208c89dc-f0fd-42bd-89b5-2bdcda08f6fd-attachment.json' type='application/json' size='137'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='877a2ee5-030e-42a0-bb19-4fdf025aae61-attachment.json' type='application/json' size='213'/>
+            </attachments>
+            <failure>
+                <message>oButton.getText is not a function</message>
+                <stack-trace>TypeError: oButton.getText is not a function
+                    at Context.&lt;anonymous> (C:\Users\voskan.grigoryan\Desktop\projects\demo_wdi5\uimodule\webapp\test\e2e\Test.test.js:41:24)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

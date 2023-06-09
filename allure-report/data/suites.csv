@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Thu Jun 08 09:49:00 ART 2023","Thu Jun 08 09:49:01 ART 2023","1044","","The MainView page: ","","The MainView page: ","should have a list that can sort ascendingly","should have a list that can sort ascendingly",""
+"passed","Thu Jun 08 09:49:00 ART 2023","Thu Jun 08 09:49:00 ART 2023","9","","The MainView page: ","","The MainView page: ","""before all"" hook for The MainView page: ","""before all"" hook for The MainView page: ",""
+"broken","Thu Jun 08 09:48:59 ART 2023","Thu Jun 08 09:49:01 ART 2023","1760","","The MainView page: ","","The MainView page: ","should have a list with at least 3 items","should have a list with at least 3 items",""
+"passed","Thu Jun 08 09:49:00 ART 2023","Thu Jun 08 09:49:01 ART 2023","623","","The MainView page: ","","The MainView page: ","should find the mainView button","should find the mainView button",""

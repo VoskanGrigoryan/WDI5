@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1686228540532' stop='1686228541587'>
+    <name>The MainView page: </name>
+    <title>The MainView page: </title>
+    <test-cases>
+        <test-case start='1686228540532' status='passed' stop='1686228540541'>
+            <name>"before all" hook for The MainView page: </name>
+            <title>"before all" hook for The MainView page: </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1686228540536' status='undefined'>
+                    <name>GET /session/:sessionId/url</name>
+                    <title>GET /session/:sessionId/url</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1686228540542' status='broken' stop='1686228541586'>
+            <name>should have a list that can sort ascendingly</name>
+            <title>should have a list that can sort ascendingly</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1686228540546' status='passed' stop='1686228540583'>
+                    <name>POST /session/:sessionId/execute/async</name>
+                    <title>POST /session/:sessionId/execute/async</title>
+                    <attachments>
+                        <attachment title='Request' source='4d29ad69-cb6d-448d-8b1c-4f90816826fb-attachment.json' type='application/json' size='1913'/>
+                        <attachment title='Response' source='58cbb6f6-c1ad-4e51-a585-d0a3e6708c66-attachment.json' type='application/json' size='34'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1686228540583' status='passed' stop='1686228541059'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='d07b49b6-4be0-4887-af2c-87f6d8cab58f-attachment.json' type='application/json' size='49'/>
+                        <attachment title='Response' source='74a5796d-31e5-484a-bc5d-3543846b0f8b-attachment.json' type='application/json' size='235'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1686228541069' status='passed' stop='1686228541124'>
+                    <name>POST /session/:sessionId/execute/async</name>
+                    <title>POST /session/:sessionId/execute/async</title>
+                    <attachments>
+                        <attachment title='Request' source='9e5131d2-3f38-47c1-b1da-946fbf3bce58-attachment.json' type='application/json' size='1903'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='fde585db-7e3c-45db-9d57-9d1025cc510a-attachment.json' type='application/json' size='221'/>
+            </attachments>
+            <failure>
+                <message>oDialogSorting.getButtons is not a function</message>
+                <stack-trace>TypeError: oDialogSorting.getButtons is not a function
+                    at Context.&lt;anonymous> (C:\Users\voskan.grigoryan\Desktop\projects\demo_wdi5\uimodule\webapp\test\e2e\List.test.js:30:57)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

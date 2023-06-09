@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core">
+
+    <ViewSettingsDialog confirm=".onFilterConfirm" title="{i18n>filterTitle}" resetFilters=".toggleInfoToolbarLabel" id="filterDialogId">
+        <filterItems>
+            <ViewSettingsItem 
+            text="{i18n>sIdInstruction}"
+            key="IdInstruction" 
+            selected="true"/>
+
+            <ViewSettingsItem 
+            text="{i18n>sCompanyCode}"
+            key="Companycode" 
+            selected="false"/>
+
+            <ViewSettingsItem 
+            text="{i18n>sBillingRequestor}"
+            key="BillingRequestor" 
+            selected="false"/>
+
+        </filterItems>
+    </ViewSettingsDialog>
+</core:FragmentDefinition>
