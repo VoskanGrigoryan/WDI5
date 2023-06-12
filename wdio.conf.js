@@ -47,11 +47,14 @@ exports.config = {
     // reporters: ["spec"],
 
     reporters: [
-        "dot",
+        "spec",
         [
-            "mochawesome",
+            "junit",
             {
-                outputDir: "./mochawesome",
+                outputDir: "./",
+                outputFileFormat: function (options) {
+                    return "mycustomfilename.xml";
+                },
             },
         ],
     ],
@@ -59,11 +62,6 @@ exports.config = {
     mochaOpts: {
         ui: "bdd",
         timeout: 60000,
-    },
-
-    onComplete: function (exitCode, config, capabilities, results) {
-        const mergeResults = require("wdio-mochawesome-reporter/mergeResults");
-        mergeResults("./mochawesome", "results-*");
     },
 
     // =====
