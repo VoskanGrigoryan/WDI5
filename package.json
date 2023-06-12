@@ -17,8 +17,7 @@
         "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
         "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest approuter/uimodule/webapp",
         "wdio": "wdio run ./wdio.conf.js",
-        "test": "wdio run ./wdio.conf.js --headless",
-        "allure": "allure generate --clean allure-results && allure open"
+        "test": "wdio run ./wdio.conf.js --headless"
     },
     "devDependencies": {
         "@babel/core": "^7.18.10",
@@ -57,9 +56,11 @@
         "ui5-task-zipper": "^0.3.1",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-geckodriver-service": "^4.0.0",
+        "wdio-mochawesome-reporter": "^4.0.0",
         "wdio-ui5-service": "^1.3.1",
         "wdio-wait-for": "^2.2.6",
         "webdriverio": "^7.19.3"
+        "mochawesome": "node mergeResults.json ./Results "wdio-mochawesome-*"
     },
     "ui5": {
         "dependencies": [

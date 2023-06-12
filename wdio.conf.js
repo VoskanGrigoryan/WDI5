@@ -47,44 +47,25 @@ exports.config = {
     // reporters: ["spec"],
 
     reporters: [
-        "spec",
+        "dot",
         [
-            "allure",
+            "mochawesome",
             {
-                outputDir: "allure-results",
-                disableWebdriverStepsReporting: false,
-                disableWebdriverScreenshotsReporting: false,
+                outputDir: "./mochawesome",
             },
         ],
     ],
 
-    //
-    // Options to be passed to Mocha.
-    // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: "bdd",
         timeout: 60000,
     },
 
-    // onComplete: function () {
-    //     const reportError = new Error("Could not generate Allure report");
-    //     const generation = allure(["generate", "allure-results", "--clean"]);
-    //     return new Promise((resolve, reject) => {
-    //         const generationTimeout = setTimeout(() => reject(reportError), 5000);
+    onComplete: function (exitCode, config, capabilities, results) {
+        const mergeResults = require("wdio-mochawesome-reporter/mergeResults");
+        mergeResults("./mochawesome", "results-*");
+    },
 
-    //         generation.on("exit", function (exitCode) {
-    //             clearTimeout(generationTimeout);
-
-    //             if (exitCode !== 0) {
-    //                 return reject(reportError);
-    //             }
-
-    //             console.log("Allure report successfully generated");
-    //             resolve();
-    //         });
-    //     });
-    // },
-    //
     // =====
     // Hooks
     // =====
